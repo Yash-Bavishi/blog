@@ -16,7 +16,7 @@ function Main() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState(null)
   useEffect(() => {
-    fetch('https://newsapi.org/v2/everything?q=science-fiction&from=2022-11-26&pageSize=10&sortBy=publishedAt&apiKey=d098bd1c8b71425fa640061e0158648c&language=en')
+    fetch('https://newsapi.org/v2/everything?q=cars&from=2022-11-26&pageSize=10&sortBy=publishedAt&apiKey=d098bd1c8b71425fa640061e0158648c&language=en')
       .then(res => res.json())
       .then(
         (result) => {
