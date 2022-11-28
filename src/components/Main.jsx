@@ -1,7 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import Blog from './Blog'
-import Mongoose from 'mongoose'
+//const mongoose = require("mongoose")
+let connectionString = 'mongodb+srv://admin:admin@blog.yku72j1.mongodb.net/?retryWrites=true&w=majority'
+
+
+
 
 function traverse(item, index) {
   return index + ": " + item.title
