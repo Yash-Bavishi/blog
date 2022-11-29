@@ -1,8 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,4 +21,189 @@ code {
 
 .card {
   background-color: #b58900;
+}
+
+.nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+}
+
+.nav > button {
+  background-color: white;
+  border-radius: 1500px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.hero {
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero > h4 {
+  margin-top: 7rem;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+.hero > h1 {
+  font-size: 9em;
+  margin-top: 0rem;
+}
+
+.hero > h1 > span {
+  color: #74872E;
+}
+
+.hero > p {
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-top: -0rem;
+}
+
+#meet {
+  margin-top: -4rem;
+}
+
+.hero > div {
+  border-radius: 100px;
+  border: 1px solid black;
+  text-align: center;
+  width: 10%;
+  padding: 25px;
+  margin-top: 2rem;
+  background-color: black;
+  color: white
+}
+
+.history {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.history > p {
+  font-size: 3em;
+  width: 75%;
+}
+
+.history > p > span {
+  color: #74872E;
+}
+
+#imp {
+  font-weight: 900;
+  font-style: bold;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hero-section > p {
+  justify-self: flex-start;
+  font-size: 2em;
+}
+
+.hero-section > h1 {
+  margin-top: 10rem;
+  font-size: 9em;
+}
+
+.hero-section > h1 > span {
+  color: #74872E;
+}
+
+.step {
+  height: 100vh;
+  font-size: 5em;
+}
+
+.step > p > span {
+  color: #74872E;
+}
+
+#circle {
+  border: 12px solid #FFE630;
+  padding: 25px;
+  border-radius: 100%;
+}
+
+.step-1 {
+  height: 100vh;
+  font-size: 3em;
+}
+
+.step-1 > p > span {
+  color: #74872E;
+}
+
+.step-2 {
+  height: 100vh;
+  font-size: 3em;
+}
+
+.step-2 > span {
+  color: #74872E;
+}
+
+.step-2 > p > span {
+  color: #74872E;
+}
+
+
+.step-3 {
+  height: 100vh;
+  font-size: 3em;
+}
+
+.step-3 > span {
+  color: #74872E;
+}
+
+.step-3 > p > span {
+  color: #74872E;
+}
+
+.begin {
+  height: 100vh;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.begin > div {
+  
+  width: 65%;
+  padding-top: 20px;
+  height: 10%;
+  border-radius: 100px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
 }
