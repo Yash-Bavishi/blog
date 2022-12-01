@@ -82,7 +82,6 @@ router.get('/user', async (req, res) => {
 
 // Create new user
 router.post('/user', async (req, res) => {
-  console.log(req.body.json)
 
   if (!req.body.name || !req.body.email || !req.body.password) {
     res.status(400).json({
@@ -96,7 +95,12 @@ router.post('/user', async (req, res) => {
     })
     await sendUser.save()
     console.log(sendUser)
-    res.status(200)
+    // res.status(200).json({
+    // "msg": "data added"
+    // })
+    res.status(200).json({
+      "uid": `${sendUser._id}`
+    })
   }
 
 })

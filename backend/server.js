@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 const express = require("express");
 const app = express();
 const routes = require("./routes");
+const cors = require("cors");
 const PORT = process.env.PORT || 5000;
 const connectionString = 'mongodb+srv://admin:admin@blog.yku72j1.mongodb.net/blog?retryWrites=true&w=majority'
 mongoose.connect(connectionString, {
@@ -10,6 +11,7 @@ mongoose.connect(connectionString, {
 })
   .then(() => {
     const app = express();
+    app.use(cors())
     app.use(express.urlencoded({ extended: true }))
     app.use(express.json())
     app.use('/api', routes)
