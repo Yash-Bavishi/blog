@@ -34,8 +34,12 @@ function Main(route, navigation) {
 
   const location = useLocation();
 
-  console.log(location.state.uid)
 
+  if (location.state) {
+    console.log("mia mor")
+  } else {
+    console.log("puta")
+  }
 
   let arr = null
 
@@ -44,12 +48,15 @@ function Main(route, navigation) {
   }
 
 
+  //{
+  //  isLoaded ? arr.map((article, index) => <Blog blog={article} key={index} />) : console.log("error")
+  //}
 
   return (
     <div className="main">
       <div className="blogs">
         {
-          isLoaded ? arr.map((article, index) => <Blog blog={article} key={index} />) : console.log("error")
+          location.state ? isLoaded ? arr.map((article, index) => <Blog blog={article} key={index} />) : console.log("error") : <h1>No user found </h1>
         }
       </div>
     </div>
