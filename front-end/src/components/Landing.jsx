@@ -1,10 +1,11 @@
-
+import { Link } from 'react-router-dom'
 function Landing() {
+
   return (
     <div className="landing">
       <div className="nav">
         <div className="square"></div>
-        <button>check out blog</button>
+        <Link to="/login" className="login"> Check out noted</Link>
       </div>
       <div className="wrapper">
         <div className="hero">

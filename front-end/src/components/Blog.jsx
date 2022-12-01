@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Routes, Route, useNavigate, Link } from 'react-router-dom'
 function Blog(props) {
   /*
       <div>
@@ -15,8 +15,10 @@ function Blog(props) {
         */
   console.log(props.blog)
 
+
   return (
-    <div>
+    <div >
+      <Link to="/blogs" className="test" state={{ from: props }}> Link to page </Link>
       <h1>{props.blog.title}</h1>
       <div className="card">
         <h3>{props.blog.author}</h3>
@@ -25,8 +27,9 @@ function Blog(props) {
         </div>
         <p>{props.blog.url}</p>
       </div>
-    </div>
+    </div >
   )
 }
 
 export default Blog
+

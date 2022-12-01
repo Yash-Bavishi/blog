@@ -11,6 +11,7 @@ router.get('/blogs', async (req, res) => {
   res.send(blogs)
 })
 
+// Save Blogs on the internet
 router.post('/blogs', async (req, res) => {
   const sendBlogs = new blog({
     title: req.body.title,
@@ -24,7 +25,7 @@ router.post('/blogs', async (req, res) => {
   res.send(sendBlogs)
 })
 
-// notes
+// Get notes based on user id
 
 router.get('/notes/:id', async (req, res) => {
   const user_id = req.params.id;
@@ -50,6 +51,7 @@ router.get('/notes', async (req, res) => {
 
 */
 
+// Save notes on the database will be used when user click to save database on /blogs
 router.post('/notes', async (req, res) => {
   const sendBlogs = new blog({
     title: req.body.title,
@@ -72,20 +74,31 @@ router.post('/notes', async (req, res) => {
 
 // user
 
+// Get all the users (It won't be used probably)
 router.get('/user', async (req, res) => {
   const user = await users.find();
   res.send(user)
 })
 
+// Create new user
 router.post('/user', async (req, res) => {
-  const sendUser = new users({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password
-  })
-  await sendUser.save()
-  console.log(sendUser)
-  res.send(sendUser)
+  console.log(req.body.json)
+
+  if (!req.body.name || !req.body.email || !req.body.password) {
+    res.status(400).json({
+      "msg": "Not all parameters found"
+    })
+  } else {
+    const sendUser = new users({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password
+    })
+    await sendUser.save()
+    console.log(sendUser)
+    res.status(200)
+  }
+
 })
 
 module.exports = router

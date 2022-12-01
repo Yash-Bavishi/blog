@@ -10,14 +10,6 @@ code {
     monospace;
 }
 
-.main {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: #002b36;
-  color: white;
-  justify-content: space-evenly;
-}
 
 .card {
   background-color: #b58900;
@@ -207,3 +199,45 @@ code {
   background-color: black;
   color: white;
 }
+
+.content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #002b36;
+  color: white;
+  justify-content: space-evenly;
+}
+
+.login {
+  border: 2px solid black;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  color: black;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.login-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 30px;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+

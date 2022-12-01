@@ -16,7 +16,7 @@ function Main() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState(null)
   useEffect(() => {
-    fetch('https://newsapi.org/v2/everything?q=cars&from=2022-11-26&pageSize=10&sortBy=publishedAt&apiKey=d098bd1c8b71425fa640061e0158648c&language=en')
+    fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-11-26&pageSize=10&sortBy=publishedAt&apiKey=d098bd1c8b71425fa640061e0158648c&language=en')
       .then(res => res.json())
       .then(
         (result) => {
@@ -45,12 +45,6 @@ function Main() {
         {
           isLoaded ? arr.map((article, index) => <Blog blog={article} key={index} />) : console.log("error")
         }
-      </div>
-      <div className="notes">
-        <form action="">
-          <textarea id="notes" name="notes" cols="30" rows="10" placeholder="Notes section"></textarea>
-        </form>
-        <button>Save to database</button>
       </div>
     </div>
   )
