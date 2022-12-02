@@ -69,7 +69,9 @@ router.post('/notes', async (req, res) => {
   })
   await sendNotes.save()
   console.log(sendNotes)
-  res.send(sendNotes)
+  res.status(200).json({
+    "msg": "success"
+  })
 })
 
 // user
