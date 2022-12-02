@@ -58,28 +58,22 @@ function Login() {
         <form action="#" method="post">
           <div>
             Name<br />
-            <input type="text" name="fname" placeholder="Name" /><br />
+            <input id="name" type="text" name="fname" placeholder="Name" /><br />
           </div><br />
           <div>
             E-mail<br />
-            <input type="email" name="email" placeholder="Email Address" /><br /><br />
+            <input id="email" type="email" name="email" placeholder="Email Address" /><br /><br />
           </div>
           <div>
             Password<br />
-            <input type="password" name="password" placeholder="Password" /><br />
+            <input id="password" type="password" name="password" placeholder="Password" /><br />
           </div>
-          <a href="#">Forgot password?</a><br />
           <br />
-          <input className="button" type="button" value="Login" />
-          <div className="signup-link">
-            Not a member?
-
-            <a href="#" target="_blank" rel="noopener noreferrer">Signup now</a>
-          </div>
 
           <br />
 
         </form>
+        <button onClick={authenticate} className="button">Login</button>
       </div >
     </div>
   )
