@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.jpeg'
 function Landing() {
 
   return (
     <div className="landing">
       <div className="nav">
-        <div className="square"></div>
+        <img src={logo} alt="Picture must be display" id="square" />
         <Link to="/login" className="login"> Check out noted</Link>
       </div>
       <div className="wrapper">

@@ -56,7 +56,7 @@ function Main(route, navigation) {
     <div className="main">
       <div className="blogs">
         {
-          location.state ? isLoaded ? arr.map((article, index) => <Blog blog={article} key={index} />) : console.log("error") : <h1>No user found </h1>
+          location.state ? isLoaded ? arr.map((article, index) => <Blog blog={article} key={index} uid={location.state.uid} />) : console.log("error") : <h1>No user found </h1>
         }
       </div>
     </div>
