@@ -39,19 +39,49 @@ function Login() {
 
   //<form action="http://localhost:5000/api/user" method="POST" className="sign-up" >
 
+  /*<form action="" className="sign-up">
+    <label htmlFor="Name">Name</label>
+    <input type="text" name="name" id="name" />
+    <label htmlFor="email">Email</label>
+    <input type="email" name="email" id="email" />
+    <label htmlFor="password">Password</label>
+    <input type="password" name="password" id="password" />
+  </form>
+  <button onClick={authenticate}>Submit</button>
+  */
 
   return (
-    <div className="login-page">
-      <form action="" className="sign-up">
-        <label htmlFor="Name">Name</label>
-        <input type="text" name="name" id="name" />
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" />
-        <label htmlFor="password">Password</label>
-        <input type="password" name="password" id="password" />
-      </form>
-      <button onClick={authenticate}>Submit</button>
-    </div >
+    <div className="login-color">
+      <div className="login-page">
+
+        <h1>Sign up</h1>
+        <form action="#" method="post">
+          <div>
+            Name<br />
+            <input type="text" name="fname" placeholder="Name" /><br />
+          </div><br />
+          <div>
+            E-mail<br />
+            <input type="email" name="email" placeholder="Email Address" /><br /><br />
+          </div>
+          <div>
+            Password<br />
+            <input type="password" name="password" placeholder="Password" /><br />
+          </div>
+          <a href="#">Forgot password?</a><br />
+          <br />
+          <input className="button" type="button" value="Login" />
+          <div className="signup-link">
+            Not a member?
+
+            <a href="#" target="_blank" rel="noopener noreferrer">Signup now</a>
+          </div>
+
+          <br />
+
+        </form>
+      </div >
+    </div>
   )
 }
 

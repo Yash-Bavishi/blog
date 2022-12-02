@@ -1,0 +1,31 @@
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(23, 77, 104) 0%, rgb(7, 122, 63));
+}
+
+.wrapper{
+    margin: auto;
+    margin-top: 10%;
+    /* margin-top: auto; */
+    padding: 5px;
+    max-width: 250px;
+    height: auto;
+    background-color: white;
+    /* box-shadow: 0px,,15px,20px rgba(0,0,0,0.1); */
+    text-align: center;    
+    box-shadow: 4px 10px black;
+}
+
+.button{
+
+    height: 25px;
+    width: 200px;
+    background-image: -webkit-linear-gradient(left, rgb(23, 77, 100), rgb(7, 122, 63);
+}
+input{
+    box-shadow: 1px 1px;
+    height: 20px;
+}
+a{
+    color: rgb(7, 122, 63);
+}
